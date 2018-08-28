@@ -51,7 +51,7 @@ class PetTableViewController: UITableViewController {
         } else if segue.identifier == "DetailSegue" {
             
             guard let destinationVC = segue.destination as? PetDetailViewController,
-            let indexPath = tableView.indexPathForSelectedRow else { return }
+                  let indexPath = tableView.indexPathForSelectedRow else { return }
             
             let pet = petController.pets[indexPath.row]
             destinationVC.petController = petController

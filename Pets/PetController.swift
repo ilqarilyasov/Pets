@@ -10,7 +10,7 @@ import Foundation
 
 class PetController {
     
-    // Create an array to store the Pets
+    // Create an array to store the Pets. And set it empty
     private(set) var pets: [Pet] = []
     
     // Create a function to save new Pet
