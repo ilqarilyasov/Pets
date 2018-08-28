@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -65,22 +66,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVl-2a-Pee">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lVl-2a-Pee">
                                 <rect key="frame" x="16" y="124" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Jd-8d-ZlT">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Jd-8d-ZlT">
                                 <rect key="frame" x="16" y="162" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lVl-2a-Pee" firstAttribute="trailing" secondItem="2Jd-8d-ZlT" secondAttribute="trailing" id="Fya-EY-UKv"/>
+                            <constraint firstItem="lVl-2a-Pee" firstAttribute="leading" secondItem="CJv-sZ-FHA" secondAttribute="leadingMargin" id="H2B-Aq-cg4"/>
+                            <constraint firstItem="lVl-2a-Pee" firstAttribute="leading" secondItem="2Jd-8d-ZlT" secondAttribute="leading" id="ICK-hp-pEG"/>
+                            <constraint firstItem="2Jd-8d-ZlT" firstAttribute="top" secondItem="lVl-2a-Pee" secondAttribute="bottom" constant="8" symbolic="YES" id="M7q-di-2bY"/>
+                            <constraint firstItem="lVl-2a-Pee" firstAttribute="trailing" secondItem="CJv-sZ-FHA" secondAttribute="trailingMargin" id="fwu-CX-cgY"/>
+                            <constraint firstItem="lVl-2a-Pee" firstAttribute="top" secondItem="ZfD-iN-WFr" secondAttribute="top" constant="8" id="sOy-Sw-0V3"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ZfD-iN-WFr"/>
                     </view>
                     <navigationItem key="navigationItem" title="Details" id="1cU-8c-BS4">
@@ -92,7 +99,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="ageTextField" destination="2Jd-8d-ZlT" id="JGz-iV-W4I"/>
-                        <outlet property="namTextField" destination="lVl-2a-Pee" id="EvS-35-9R0"/>
+                        <outlet property="nameTextField" destination="lVl-2a-Pee" id="EvS-35-9R0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ZS-CI-Ozh" userLabel="First Responder" sceneMemberID="firstResponder"/>

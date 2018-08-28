@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Create a structure for the Pets
 struct Pet: Equatable {
     
     var name: String
